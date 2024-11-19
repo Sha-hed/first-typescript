@@ -10,7 +10,7 @@ export interface Guardian {
 
 export type UserName = {
   firstName: string;
-  middleName: string;
+  middleName?: string;
   lastName: string;
 };
 export type LocalGuardian = {
@@ -22,8 +22,8 @@ export type LocalGuardian = {
 export type Student = {
   id: string;
   name: UserName;
-  gender: 'Male' | 'Female';
-  dateOfBirth: string;
+  gender: 'Male' | 'Female' | 'other';
+  dateOfBirth?: string;
   email: string;
   contactNo: string;
   emergencyContactNo: string;
@@ -32,6 +32,6 @@ export type Student = {
   permanentAddress: string;
   guardian: Guardian;
   localGuardian: LocalGuardian;
-  profileImg: string;
+  profileImg?: string;
   isActive: 'Active' | 'InActive';
 };
